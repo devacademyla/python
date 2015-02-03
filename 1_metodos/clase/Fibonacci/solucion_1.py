@@ -1,16 +1,15 @@
-# -*- coding: utf-8 -*-
 fib = 1
 fib2 = 2
-acarr = 0
+fn = 0
 suma = 0
 
-while acarr <=4000000:
-    acarr = fib2
-    if acarr % 2 == 0:
-        suma += acarr
-    acarr = fib + fib2
+while fn <=4000000:
+    fn = fib2
+    if fn % 2 == 0:
+        suma += fn
+    fn = fib + fib2
     fib = fib2
-    fib2 = acarr
+    fib2 = fn
 
 print suma 
 
