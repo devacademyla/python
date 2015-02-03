@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 num = 600851475143
 div = 2
 while div < num:
