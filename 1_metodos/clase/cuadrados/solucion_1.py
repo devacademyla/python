@@ -10,5 +10,5 @@ for i in range(101):
 	suma += i
 cuadrado_de_suma = suma ** 2
 
-resta(cuadrado_de_suma,suma_de_cuadrados)
+
 
