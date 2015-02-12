@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import math
 
 
@@ -10,5 +11,5 @@ def primo(num):
         return num
     else:
         return False
-lista = range(1, 10000)
+lista = range(1, 1000)
 print sum(filter(primo, lista))
