@@ -2,8 +2,9 @@
 import random
 
 def lanzar_dado():
-	dado = 1 + random.randrange(6)
-	print "Dado" , dado , "y el castigo es: "
+	return 1 + random.randrange(6)
+
+def definir_castigo(dado):
 	if dado == 1 or dado == 5:
 		print "Toman todos"
 	if dado == 2 or dado == 6:
@@ -13,4 +14,9 @@ def lanzar_dado():
 	if dado == 4:
 		print "Toma el de la izquierda"
 
-lanzar_dado()
+def jugar():
+	dado = lanzar_dado()
+	print "Salió el valor", dado, "entonces:"
+	castigo = definir_castigo(dado)
+
+jugar()
