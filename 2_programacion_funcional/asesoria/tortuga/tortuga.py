@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 import random
-
+ 
 def lanzar_dado():
     return 1 + random.randrange(6)
-
+ 
 def num_dados(n):
     lista = []
     for i in range(n):
         lista += [lanzar_dado()]
     return lista
-
+ 
 def resultado(caparazon, patas, num_patas):
     # print caparazon, patas, num_patas
     if caparazon is True:
@@ -22,10 +22,8 @@ def resultado(caparazon, patas, num_patas):
             return "Tengo el caparazón"
     else:
         return "No tengo nada"
-
-
+ 
 def calculo(caparazon, patas, num_patas, n, dados):
-
     dados = dados
     # print dados
     if caparazon:
@@ -44,10 +42,8 @@ def calculo(caparazon, patas, num_patas, n, dados):
                 if i == 1:
                     num_patas += 1
                     n -= 1
-
     return caparazon, patas, num_patas, n, dados
-
-
+ 
 def juego():
     caparazon = False
     patas = False
@@ -60,4 +56,9 @@ def juego():
         print dados
         print resultado(caparazon, patas, num_patas)
         jugadas -= 1
+<<<<<<< HEAD
 juego()
+=======
+ 
+juego() 
+>>>>>>> 39123ef876f3c511ee9fc1b3a950f8b1e5a551fb
