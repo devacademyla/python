@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Especialidad(object):
 
     def profesion(self):
@@ -10,7 +11,6 @@ class DarthVader(Especialidad):
 
     def __init__(self, nombre):
         self.nombre = nombre
-
 
     def hablar(self):
         return u'%s: Luke, yo soy tu padre' % self.nombre
