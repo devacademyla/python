@@ -14,5 +14,4 @@ def primo(num):
         return False
 
 
-lista = range(1, 1000 + 1)
-print sum(filter(primo, lista))
+print sum([n for n in range(1, 1000 + 1) if primo(n)])

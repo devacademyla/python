@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+
 import random
 
 def lanzar_dado():
     return 1 + random.randrange(6)
+
 
 def num_dados(n):
     lista = []
@@ -10,18 +12,20 @@ def num_dados(n):
         lista += [lanzar_dado()]
     return lista
 
+
 def resultado(caparazon, patas, num_patas):
     # print caparazon, patas, num_patas
     if caparazon is True:
         if patas is True:
             if num_patas < 2:
-                return "Tengo el caparazón \nTengo {} pata".format(num_patas)
+                return u"Tengo el caparazón \nTengo {} pata".format(num_patas)
             elif num_patas >= 2:
-                return "Tengo el caparazón \nTengo {} patas".format(num_patas)
+                return u"Tengo el caparazón \nTengo {} patas".format(num_patas)
         else:
-            return "Tengo el caparazón"
+            return u"Tengo el caparazón"
     else:
-        return "No tengo nada"
+        return u"No tengo nada"
+
 
 def calculo(caparazon, patas, num_patas, n, dados):
     dados = dados
@@ -44,6 +48,7 @@ def calculo(caparazon, patas, num_patas, n, dados):
                     n -= 1
     return caparazon, patas, num_patas, n, dados
 
+
 def juego():
     caparazon = False
     patas = False
@@ -52,8 +57,11 @@ def juego():
     jugadas = 3
     while jugadas > 0:
         dados = num_dados(n)
-        caparazon, patas, num_patas, n, dados = calculo(caparazon, patas, num_patas, n, dados)
+        caparazon, patas, num_patas, n, dados = \
+            calculo(caparazon, patas, num_patas, n, dados)
         print dados
         print resultado(caparazon, patas, num_patas)
         jugadas -= 1
-juego()
+
+if __name__ == '__main__':
+    juego()
