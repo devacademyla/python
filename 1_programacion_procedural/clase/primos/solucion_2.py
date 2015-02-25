@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def num_prim(num):
 	div = 2
 	while div < num:
@@ -6,4 +8,5 @@ def num_prim(num):
 		div = div + 1
 	print div
 
-num_prim(600851475143)
+if __name__ == '__main__':
+    num_prim(600851475143)
