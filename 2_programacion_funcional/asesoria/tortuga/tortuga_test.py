@@ -60,4 +60,6 @@ class TestTortuga(unittest.TestCase):
         self.assertMultiLineEqual(
             u"Tengo el caparazón \nTengo 1 pata", self.resultado_dados)
 
-# python -m unittest -v tortuga_unittest
+if __name__ == '__main__':
+    unittest.main()
+
