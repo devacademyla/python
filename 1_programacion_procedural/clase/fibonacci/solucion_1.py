@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 fib = 1
 fib2 = 2
 fn = 0
 suma = 0
 
-while fn <=4000000:
+while fn <= 4000000:
     fn = fib2
     if fn % 2 == 0:
         suma += fn

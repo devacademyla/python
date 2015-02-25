@@ -1,4 +1,6 @@
-class Persona():
+# -*- coding: utf-8 -*-
+
+class Persona(object):
     def __init__(self, nombre):
         self.nombre = nombre
 
@@ -6,8 +8,9 @@ class Persona():
         return self.nombre
 
     def saludar(self):
-        return "Hola, mi nombre es {}".format(self.nombre)
+        return u"Hola, mi nombre es {}".format(self.nombre)
 
-#saluda = Persona('pedro')
-#print saluda.mi_nombre()
-#print saluda.saludar()
+if __name__ == '__main__':
+    persona = Persona('Pedro')
+    print persona.mi_nombre()
+    print persona.saludar()
