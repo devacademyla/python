@@ -6,15 +6,20 @@ from xmen import Xmen, Magneto, ProfesorX
 
 class XmenTest(unittest.TestCase):
     def setUp(self):
-        self.xmen = Xmen().demostrar_poder()
-        self.magneto_poder = Magneto().demostrar_poder()
-        self.profesorx_poder = ProfesorX().demostrar_poder()
+        self.xmen = Xmen(u"Wolverine").demostrar_poder()
+        self.magneto_poder = Magneto(u"Magneto").demostrar_poder()
+        self.profesorx_poder = ProfesorX(u"Profesor X").demostrar_poder()
 
     def test_xmen(self):
-        self.assertEqual(self.xmen, 'Descubriendo poder')
+        assert self.xmen.endswith(
+            u'estoy descubriendo mi poder')
 
     def test_magneto(self):
-        self.assertEqual(self.magneto_poder, 'Controlar objetos metalicos')
+        assert self.magneto_poder.endswith(
+            u'puedo controlar objetos metálicos')
 
     def test_profesorx(self):
-        self.assertEqual(self.profesorx_poder, 'Telepatia')
+        assert self.profesorx_poder.endswith(u'y tengo telepatía')
+
+if __name__ == '__main__':
+     unittest.main()
