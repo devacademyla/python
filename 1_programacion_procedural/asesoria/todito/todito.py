@@ -3,7 +3,7 @@
 import random
 
 def lanzar_dado():
-    return 1 + random.randrange(6)
+    return random.randint(1, 6)
 
 def definir_castigo(dado):
     if dado == 1 or dado == 5:
