@@ -6,7 +6,7 @@ class Dado(object):
 
     @staticmethod
     def lanzar_dado():
-        return random.randrange(1, 7)
+        return random.randint(1, 6)
 
 
 class Todito(Dado):

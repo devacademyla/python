@@ -9,7 +9,7 @@ class Dado(object):
 
     @staticmethod
     def lanzar_dado():
-        return random.randrange(1, 6+1)
+        return random.randint(1, 6)
 
     def num_dados(self, n):
         for i in range(n):
